@@ -1,31 +1,37 @@
-# For PCBs designed using KiCad: https://www.kicad.org/
-# Format documentation: https://kicad.org/help/file-formats/
-
-# Temporary files
-*.000
-*.bak
-*.bck
-*.kicad_pcb-bak
-*.kicad_sch-bak
-*-backups
+# ---- KiCad 一時ファイル・バックアップ ----
+*-backups/
 *.kicad_prl
 *.sch-bak
-*~
-_autosave-*
-*.tmp
-*-save.pro
-*-save.kicad_pcb
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.bak
+
+# フットプリントキャッシュ
 fp-info-cache
-~*.lck
-\#auto_saved_files#
 
-# Netlist files (exported from Eeschema)
+# ---- 生成物（必要ならコミットしない）----
+
+# ネットリスト・BOM など
 *.net
-
-# Autorouter files (exported from Pcbnew)
-*.dsn
-*.ses
-
-# Exported BOM files
 *.xml
 *.csv
+
+# 位置データ
+*.pos
+
+# Gerber / drill / fab ファイル
+*.gbr
+*.gtl
+*.gbl
+*.gts
+*.gbs
+*.gto
+*.gbo
+*.gm*
+*.drl
+*.zip
+
+# 生成物用フォルダ（jlcpcb/ など）
+gerber/
+fabrication/
+out/
